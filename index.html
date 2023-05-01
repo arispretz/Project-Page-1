@@ -1,129 +1,249 @@
-<!DOCTYPE html>
+:root {
+  --main-purple: #6C3483;
+  --main-maroon: #834434;
+  --main-green: #4B8334;
+  --main-white: #ffffff;
+  --main-darkgrey: #1f1f1f;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+}
 
-<html>
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
-<head>
-<meta charset="utf-8">
+html {
+  box-sizing: border-box;
+  font-family:'Open Sans', sans-serif;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 
-  <meta name="viewport" content="width=device-width">
-  <title>Personal Portfolio</title>
-  <link href="css/style.css" rel="stylesheet" type="text/css" />
-</head>
+}
 
-<body>
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
 
+@media (max-width: 61.25em) {
+  html {
+    font-size: 50%;
+  }
+}
 
-<nav id="navbar" class="nav">
+@media (max-width: 28.75em) {
+  html {
+    font-size: 45%;
+  }
+}
 
-<ul class="nav-list">
+body {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.4;
+  background-color: var(--main-green);
+  overflow-x: hidden;
+}
 
-<li>
+h2 {
+  text-align: center;
+  color: var(--main-white);
+  font-size: 3rem;
+  padding-right: 20rem;
+  padding-top: 0.5rem;
+  font-weight: bold;
+  font-family: verdana;
+}
 
-<a href="http://arispretz.github.io" target="_blank">Home</a>
+.background {
+  background-color: var(--main-purple);
+}
 
-</li>
+.move {
+  background-color: var(--main-purple);
+  font-size: 1.5rem;
+}
 
-</ul>
+p {
+  font-size: 2.8rem;
+  color: var(--main-white);
+}
 
-</nav>
+ul {
+  list-style: none;
+}
 
-<section id="projects" class="projects-section">
-</br>
-<h2 class="projects-section-header">my projects</h2>
+a {
+  color: var(--main-white);
+  text-decoration: none;
+}
 
-<div class="projects-grid">
-<div class="background">
-  <p class="project-title">Roman Numeral Converter</p>
-<img class="project-image" src="images/Screenshot roman numeral converter.png" alt="project" />
+a:hover {
+  text-decoration: underline;
+}
 
-<section>
-  <ul>
-    <span><button class="move"><a href="Roman Numeral Converter/index.html" target="_blank" class="project project-tile">Live View</a></button></span>
+.nav {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--main-maroon);
+  z-index: 10;
+}
 
-      <span><button class="move"><a href="https://github.com/arispretz/Roman-Numeral-Converter" target="_blank">Source Code</a></button></span>
-      </ul>
-    </section>
-</div>
+.nav-list {
+  display: flex;
+  margin-right: 2rem;
+}
 
-<div class="background">
-  <p class="project-title">Caesars Cipher</p>
-<img class="project-image" src="images/Screenshot caesars cipher.png" alt="project" />
+@media (max-width: 28.75em) {
+  .nav {
+    justify-content: center;
+  }
 
-<section>
-  <ul>
-    <span><button class="move"><a href="Caesars Cipher/index.html" target="_blank" class="project project-tile">Live View</a></button></span>
+  .nav-list {
+    margin: 0 1rem;
+  }
+}
 
-      <span><button class="move"><a href="https://github.com/arispretz/Caesars-Cipher" target="_blank">Source Code</a></button></span>
-      </ul>
-    </section>
-</div>
+.nav-list a {
+  display: block;
+  font-size: 2.2rem;
+  padding: 2rem;
+}
 
-<div class="background">
-  <p class="project-title">Telephone Number Validator</p>
-<img class="project-image" src="images/Screenshot telephone number validator.png" alt="project" />
+.nav-list a:hover {
+  background-color: var(--main-purple);
+}
 
-<section>
-  <ul>
-    <span><button class="move"><a href="Telephone Number Validator/index.html" target="_blank" class="project project-tile">Live View</a></button></span>
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150vh;
+  row-gap: 2rem;
+  column-gap: 2rem;
+  text-align: center;
+  padding: 10rem 9rem 10rem 9rem;
+  background-color: var(--main-green);
+}
 
-      <span><button class="move"><a href="https://github.com/arispretz/Telephone-Number-Validator" target="_blank">Source Code</a></button></span>
-      </ul>
-    </section>
-</div>
-  
-<div class="background">
-  <p class="project-title">Cash Register</p>
-<img class="project-image" src="images/Screenshot cash register.png" alt="project" />
+@media (max-width: 28.75em) {
+  .projects-section-header {
+    font-size: 7rem;
+    font-style: italic;
+    font-weight: 150rem;
+  }
+}
 
-<section>
-  <ul>
-    <span><button class="move"><a href="Cash Register/index.html" target="_blank" class="project project-tile">Live View</a></button></span>
+.projects-section-header {
+  max-width: 640px;
+  margin: 7rem auto 3rem auto;
+  padding-top: 180px;
+}
 
-      <span><button class="move"><a href="https://github.com/arispretz/Cash-Register" target="_blank">Source Code</a></button></span>
-      </ul>
-    </section>
-</div>
-<div class="background">
-  <p class="project-title">Random Quote Machine</p>
-<img class="project-image" src="images/Screenshot random quote machine.png" alt="project" />
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin-bottom: 5rem;
+  margin-right: 18rem;
+}
 
-<section>
-  <ul>
-    <span><button class="move"><a href="Random Quote Machine/index.html" target="_blank" class="project project-tile">Live View</a></button></span>
+@media (max-width: 30.625em) {
+  .projects-section {
+    padding: 10rem 5rem;
+  }
 
-      <span><button class="move"><a href="https://github.com/arispretz/Random-Quote-Machine" target="_blank">Source Code</a></button></span>
-      </ul>
-    </section>
-</div>
-<div class="background">
-  <p class="project-title">
-    React Markdown Previewer</p>
-<img class="project-image" src="images/Screenshot markdown previewer.png" alt="project" />
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
-<section>
-  <ul>
-    <span><button class="move"><a href="React Markdown Previewer/index.html" target="_blank" class="project project-tile">Live View</a></button></span>
+.project {
+  background-color: var(--main-purple);
+  box-shadow: 1px 1px 2px var(--main-darkgrey);
+  border-radius: 2px;
+}
 
-      <span><button class="move"><a href="https://github.com/arispretz/React-Markdown-Previewer" target="_blank">Source Code</a></button></span>
-      </ul>  
-    </section>
-</div>
-</br>
-</div>
-  
-<div id="button">
-<a href="" class="btn btn-show-more" target="_blank">page 1</a>
-<a href="" class="btn btn-show-more" target="_blank">page 3</a>
-  </div>
-<br />
-</body>
-</br>
-<footer>
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
 
-<p>&copy; Created by Ariana Spretz.</p>
+.project-title {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+}
 
-</footer>
+#button {
+  padding-right: 20rem;
+}
 
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+}
 
-</html>
+.btn-show-more {
+  font-size: 2rem;
+  background-color: var(--main-maroon);
+  transition: background 0.3s ease-out;
+  border-radius: 20%;
+}
+
+.btn-show-more:hover {
+  background-color: var(--main-purple);
+}
+
+#flow {
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.move:hover {
+  background-color: var(--main-purple);
+  color: var(--main-white);
+}
+
+a {
+  color: var(--main-white);
+  text-decoration: none;
+}
+
+@media (max-width: 28.75em) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+footer {
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4rem;
+  background-color: var(--main-purple);
+  color: var(--main-white);
+  max-height: 3.5rem;
+  margin-right: 18rem;
+}
+
+footer > p {
+  margin: 2rem;
+}
